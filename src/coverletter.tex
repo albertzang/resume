@@ -1,0 +1,42 @@
+\documentclass[letterpaper]{article}
+\usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{textpos}
+\usepackage{geometry}
+\usepackage{fontawesome}
+\usepackage[T1]{fontenc}
+\usepackage[nomessages]{fp}
+\usepackage[utopia]{mathdesign}
+% commands %
+\input{./utils/commands.tex}
+% settings %
+\input{./utils/settings.tex}
+% personal info %
+\def\name{Yansong Zang}
+\def\phone{(+1)778.237.8615}
+\def\email{albertzang.ys@gmail.com}
+\def\city{Vancouver BC}
+\def\country{Canada}
+% position info %
+\def\company{Company Inc}
+\def\addrstreet{Company Street}
+\def\addrcity{Company City}
+\def\addrcountry{Company Country}
+\def\subject{RE: Application for Position Title}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerfull{\name}{\city}{\country}{\phone}{\email}
+\letterhead{\company}{\addrstreet}{\addrcity}{\addrcountry}{\subject}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{12} (0,\vcursor)
+  Dear ...,\par
+  \vspace{1em}
+  I am ...\par
+  \vspace{1em}
+  Thank you for ...\par
+  \vspace{1em}
+  Sincerely,\par
+  \name
+\end{textblock}
+\end{document}

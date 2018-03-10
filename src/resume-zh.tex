@@ -1,0 +1,111 @@
+\documentclass[letterpaper]{article}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{textpos}
+\usepackage{geometry}
+\usepackage{fontawesome}
+\usepackage[T1]{fontenc}
+\usepackage[nomessages]{fp}
+\usepackage[utopia]{mathdesign}
+\setCJKmainfont[Path=./fonts/, Extension=.ttf, BoldFont=MicrosoftYaHei-Bold, AutoFakeSlant=true]{MicrosoftYaHei}
+\setCJKsansfont[Path=./fonts/, Extension=.ttf, BoldFont=MicrosoftYaHei-Bold, AutoFakeSlant=true]{MicrosoftYaHei}
+\setCJKmonofont[Path=./fonts/, Extension=.ttf, BoldFont=MicrosoftYaHei-Bold, AutoFakeSlant=true]{MicrosoftYaHei}
+% commands %
+\input{./utils/commands.tex}
+% settings %
+\input{./utils/settings.tex}
+% personal info %
+\def\name{臧岩松}
+\def\phone{(+1)187.2104.5485}
+\def\email{albertzang.ys@foxmail.com}
+
+\begin{document}
+\headershort{\name}{\phone}{\email}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectiontitle{教育背景}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsectiontitle{Professional Master's Program in Big Data}
+\doublegriditem{Simon Fraser University}{M.Sc. in Computing Science; GPA:3.93/4.33}[加拿大，温哥华][2015年9月 --- 2016年12月]
+\subsectiontitle{Dual-Degree Program in Computing Science}
+\doublegriditem{Simon Fraser University}{B.Sc. in Computing Science; GPA:3.68/4.33}[加拿大，温哥华][2010年9月 --- 2013年4月]
+\doublegriditem{浙江大学}{B.Eng. in Computing Science; GPA:4.20/5.00}[中国，杭州][2008年9月 --- 2010年8月]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectiontitle{获奖经历}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsectiontitle{Dean's Honour Roll in Computing Science}[Simon Fraser University]
+\subsectiontitle{国家奖学金}[浙江大学]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectiontitle{专业技能}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsectiontitle{编程语言}
+\griditem{精通使用Python/Java/JavaScript}
+\griditem{熟练掌握Scala/C++/C}
+\subsectiontitle{Web开发}
+\griditem{熟练使用JavaScript/Less/CSS/HTML5等前端开发必备技能}
+\griditem{能独立搭建前端项目，熟悉Node.js/npm/gulp/bower等前端集成工具}
+\subsectiontitle{大数据}
+\griditem{具备Spark/Cassandra DB/Hadoop MapReduce等大数据领域相关技术的实战经验}
+\griditem{熟悉AWS EC2等云端服务器环境部署方法，理解联机数据处理（OLAP）及数据仓库（DWH）等理论概念}
+\subsectiontitle{软件工程}
+\griditem{熟悉Linux/Windows开发环境，熟练使用Docker搭建应用开发及运行环境}
+\griditem{具备多线程开发、分布式系统构架环境下的远程过程调用（RPC）及数据库管理实践经验}
+\griditem{熟悉多种业界实践软件开发生命周期及设计模式（Design Pattern）}
+\griditem{熟练掌握版本控制系统如Git及Subversion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectiontitle{工作经历}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsectiontitle{Web开发工程师 @ Fortinet Technologies Inc.}[加拿大，2013年5月 --- 2015年6月]
+\griditem{负责公司产品基于网页的用户操作界面的日常开发及维护，具备丰富的网页应用开发实战经验}
+\griditem{与多个相关的产品、设计以及开发团队协作完成高质量的、用户友好的网页应用}
+\griditem{熟练掌握多种前端开发框架及开发库如AngularJS/jQuery/Underscore/YUI/Bootstrap}
+\griditem{以及服务器端框架平台Tornado/Django/Node.js}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\flushpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\headershort{\name}{\phone}{\email}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\sectiontitle{实习经历}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsectiontitle{数据研发工程师 @ FuseForward Solutions Group Ltd.}[加拿大，2016年5月 --- 2016年8月]
+%\griditem{负责一项基于Publish/Subscribe消息范式的Data Ingestion及KPI计算Java工程项目}
+%\griditem{使用Apache Camel定义消息路由及Apache ActiveMQ处理消息队列}
+%\griditem{使用Spark Streaming读取消息流并将处理计算结果实时更新至Cassandra数据库}
+%\subsectiontitle{软件工程师 @ DemonWare Inc.}[加拿大，2012年9月 --- 2013年4月]
+%\griditem{参与一项基于Python Tornado服务器框架的RESTful软件项目的研发}
+%\griditem{学习并掌握了分布式系统下的RESTful API设计以及数据缓存技术的使用场景}
+%\griditem{锻炼并提高了面向对象开发的理念以及在高度并发性系统下分析解决问题和设计实现解决方案的能力}
+%\subsectiontitle{软件工程师 @ Capcom Vancouver}[加拿大，2012年1月 --- 2012年4月]
+%\griditem{负责公司内部游戏设计开发工具的日常开发及维护}
+%\griditem{获取Windows Presentation Foundation (WPF)界面框架的实践开发经验}
+%\griditem{熟悉游戏业界开发设计团队的分工及协作流程}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\sectiontitle{项目经历}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsectiontitle{Weather Tweets}[2016年]
+%\griditem{大数据课程项目，使用Scala编程，以Twitter Streaming API作为主要数据来源}
+%\griditem{利用Apache Kafka搭建连接Twitter Streaming与Spark Streaming的消息队列}
+%\griditem{对每条tweet从Yahoo Weather API获取实时天气信息并进行数据缓存，同时集成IBM Watson Tone Analyzer进行语义分析}
+%\griditem{利用Spark RDD对原始数据进行过滤、集成以及整合用以发现天气条件对大众心情的影响情况，并将处理结果实时写入MySQL数据库}
+%\griditem{使用Python Tornado与AngularJS搭建Web服务器后端框架与前端界面，并利用C3.js完成数据可视化解决方案}
+%\subsectiontitle{IMDb OLAP}[2015年]
+%\griditem{大数据课程项目，使用Scala编程}
+%\griditem{结合Spark RDD/Spark MLlib完成数据处理与分析以及利用Cassandra DB实现数据存储与快速查询功能}
+%\griditem{从IMDb的海量电影相关信息中挖掘出经常合作出演的演员组合}
+%\griditem{分析电影类别、男女演员比例以及参演演员平均年龄与电影评分和投票量的关联性}
+%\subsectiontitle{Distributed Transaction System}[2011年]
+%\griditem{操作系统课程项目，使用Java编程，搭建一个具备高可用性特征的分布式文件系统}
+%\griditem{利用TCP Socket进行数据的可靠传输}
+%\griditem{同时在主服务器与从服务器上运行同一请求监听程序以实现故障冗余，并可扩展至多台服务器以提高可用性}
+%\griditem{文件服务器具备状态备份及事务回滚机制，可应对在任何时间节点中断服务，服务重启后将自动完成状态恢复并时刻保持服务器一致状态}
+%\subsectiontitle{Diagon Alley}[2011年]
+%\griditem{操作系统课程项目，使用C++多线程编程，实现一个线程调度程序}
+%\griditem{两个对立阵营的巫师女巫同时在对角巷购物，每位巫师女巫有各自不同的购物清单}
+%\griditem{要求各位按照清单顺序完成所有购物且对立阵营巫师女巫不得在同一家商店共存}
+%\griditem{调度程序应确保所有巫师女巫都能高效的完成自己的购物且无死锁情况发生}
+%\subsectiontitle{Wumpus World}[2011年]
+%\griditem{人工智能课程项目，使用Java编程，实现一个自主推理和行动的机器人程序}
+%\griditem{机器人进入一个由4$\times$4个方格房间组成的游戏世界，其中随机布有怪物一格、陷阱若干格以及黄金宝物一格}
+%\griditem{机器人可以感知相邻房间并有记忆能力，从指定初始格出发可以进行转身、前进以及射箭三种动作}
+%\griditem{机器人程序不断探索未知世界并通过推理更新认知，以最少的行动次数找到黄金并安全返回出发格}
+\end{document}

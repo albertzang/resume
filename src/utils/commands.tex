@@ -1,0 +1,115 @@
+\def\fontxs{\fontsize{8pt}{10pt}\selectfont}
+\def\fontsm{\fontsize{10pt}{12pt}\selectfont}
+\def\fontmd{\fontsize{11pt}{13pt}\selectfont}
+\def\fontlg{\fontsize{12pt}{14pt}\selectfont}
+\def\fontxl{\fontsize{30pt}{32pt}\selectfont}
+\def\indentsize{5pt}
+\definecolor{light-gray}{gray}{0.9}
+
+% flushpage %
+\NewDocumentCommand{\flushpage}{}{
+  \newpage\FPeval{\vcursor}{0}
+}
+
+% gridspace %
+% #1 = vertical space in unit of grid
+\NewDocumentCommand{\gridspace}{m}{
+  \FPeval{\vcursor}{\vcursor+#1}
+}
+
+% grid %
+% #1 = keep vcursor
+% #2 = width
+% #3 = height
+% #4 = hpos
+% #5 = content
+% #6 = color
+\NewDocumentCommand{\grid}{smmmmo}{
+  \def\gridbox{\parbox[c][#3\TPVertModule][c]{#2\TPHorizModule}{#5}}
+  \begin{textblock}{#2} (#4,\vcursor)
+    \IfValueTF{#6}{\colorbox{#6}{\gridbox}}{\gridbox}
+  \end{textblock}
+  \IfBooleanF{#1}{\gridspace{#3}}
+}
+
+% letterhead %
+% #1 = company name
+% #2 = street address
+% #3 = city address
+% #4 = country address
+% #5 = letter subject
+\NewDocumentCommand{\letterhead}{mmmmm}{
+  \gridspace{1}
+  \grid{6}{2}{0}{\fontsm\textit{\today}}
+  \gridspace{1}
+  \grid{6}{2}{0}{\fontsm\textsc{#1}}
+  \gridspace{0.5}
+  \grid{6}{2}{0}{\fontsm#2}
+  \grid{6}{2}{0}{\fontsm#3}
+  \grid{6}{2}{0}{\fontsm#4}
+  \gridspace{1}
+  \grid{6}{2}{0}{\fontsm\textbf{\underline{#5}}}
+  \gridspace{1}
+}
+
+% headerfull %
+% #1 = name
+% #2 = city
+% #3 = country
+% #4 = phone
+% #5 = email
+\NewDocumentCommand{\headerfull}{mmmmm}{
+  \grid*{6}{4}{0}{\fontxl\textbf{\textsc{#1}}}
+  \grid{6}{4}{6}{\fontxs\hspace{\fill}\LaTeX}
+  \grid*{6}{2}{0}{\fontsm\texttt{#2}}
+  \grid{6}{2}{6}{\fontsm\hspace{\fill}\texttt{#4}}
+  \grid*{6}{2}{0}{\fontsm\texttt{#3}}
+  \grid{6}{2}{6}{\fontsm\hspace{\fill}\texttt{#5}}
+  \grid{12}{1}{0}{\rule{12\TPHorizModule}{0.5pt}}
+}
+
+% headershort %
+% #1 = name
+% #2 = phone
+% #3 = email
+\NewDocumentCommand{\headershort}{mmm}{
+  \grid*{6}{4}{0}{\fontxl\textbf{\textsc{#1}}}
+  \grid{6}{2}{6}{\fontsm\hspace{\fill}\texttt{#2}}
+  \grid{6}{2}{6}{\fontsm\hspace{\fill}\texttt{#3}}
+  \grid{12}{1}{0}{\rule{12\TPHorizModule}{0.5pt}}
+}
+
+% sectiontitle %
+% #1 = icon
+% #2 = title
+\NewDocumentCommand{\sectiontitle}{om}{
+  \gridspace{1}
+  \grid{12}{2}{0}{\fontlg\hspace{\indentsize}\IfValueT{#1}{\faicon{#1}\hspace{\indentsize}}\textsc{#2}}[light-gray]
+  \gridspace{1}
+}
+
+% subsectiontitle %
+% #1 = subtitle
+% #2 = sidenote
+\NewDocumentCommand{\subsectiontitle}{mO{}}{
+  \grid*{6}{2}{0}{\fontmd\hspace{\indentsize}\textbf{#1}}
+  \grid{6}{2}{6}{\fontsm\hspace{\fill}\textit{#2}\hspace*{\indentsize}}
+}
+
+% griditem %
+% #1 = item
+\NewDocumentCommand{\griditem}{m}{
+  \grid{12}{2}{0}{\fontsm\hspace{\indentsize}#1}
+}
+
+% doublegriditem %
+% #1 = bold top-left
+% #2 = italic bottom-left
+% #3 = normal top-right
+% #4 = italic bottom-right
+\NewDocumentCommand{\doublegriditem}{mmO{}O{}}{
+  \grid*{6}{1.5}{0}{\fontsm\hspace{\indentsize}\textbf{#1}}
+  \grid{6}{1.5}{6}{\fontsm\hspace{\fill}#3\hspace*{\indentsize}}
+  \grid*{6}{1.5}{0}{\fontsm\hspace{\indentsize}\textit{#2}}
+  \grid{6}{1.5}{6}{\fontsm\hspace{\fill}\textit{#4}\hspace*{\indentsize}}
+}
