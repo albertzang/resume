@@ -1,113 +1,67 @@
 \documentclass[letterpaper]{article}
+\usepackage{calc}
 \usepackage{xcolor}
 \usepackage{xparse}
-\usepackage{textpos}
+\usepackage[showboxes]{textpos}
+\usepackage{setspace}
 \usepackage{geometry}
 \usepackage{fontawesome}
 \usepackage[T1]{fontenc}
 \usepackage[nomessages]{fp}
 \usepackage[utopia]{mathdesign}
-% commands %
-\input{./utils/commands.tex}
-% settings %
-\input{./utils/settings.tex}
-% personal info %
-\def\name{Yansong Zang}
+\input{commands.tex}
+\def\name{Albert Zang}
 \def\phone{(+1)778.237.8615}
 \def\email{albertzang.ys@gmail.com}
 \def\city{Vancouver BC}
 \def\country{Canada}
 
 \begin{document}
+%\TPShowGrid{2}{160}
 \headerfull{\name}{\city}{\country}{\phone}{\email}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectiontitle[gears]{Technical Skills}
+\sectiontitle{gears}{Technical Vocabulary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsectiontitle{Programming Languages}
-\griditem{Proficient in Scala, Java and Python}
-\griditem{Familiar with JavaScript, CSS/Less/Sass and HTML5}
-\subsectiontitle{Tools and Frameworks}
-\griditem{Spark, Hadoop, Kafka, Redis, MySQL, Cassandra, Elasticsearch, Docker, AWS, Git, Subversion}
-\griditem{Vue.js, AngularJS, jQuery, Bootstrap, Node.js, Express, Tornado, WebSocket, Maven, Gradle, SBT, Gulp, Webpack}
-\subsectiontitle{Specialisms and Interests}
-\griditem{Machine Learning, Data Mining, Realtime Data Pipelines, Spark Streaming and Batch Processing}
-\griditem{Rich Web Application, Data Visualization, Microservice Architecture, Scalable and Reliable Distributed System}
+\gridpar{12}{
+    Angular $\cdot$ Augmented Analytics $\cdot$ Bazel $\cdot$ Big Data $\cdot$ Bootstrap $\cdot$ Business Intelligence $\cdot$
+    C++ $\cdot$ \textbf{CI/CD} $\cdot$ \textbf{CSS} $\cdot$ Data Analytics $\cdot$ Data Mining $\cdot$ Data Pipelines $\cdot$
+    Data Visualization $\cdot$ \textbf{Docker} $\cdot$ \textbf{Git} $\cdot$ Gradle $\cdot$ Hadoop $\cdot$ HTML5 $\cdot$ Java $\cdot$
+    JavaScript $\cdot$ jQuery $\cdot$ Kafka $\cdot$ Kubernetes $\cdot$ Machine Learning $\cdot$ Maven $\cdot$ Microservice $\cdot$
+    Node.js $\cdot$ Perforce $\cdot$ \textbf{Python} $\cdot$ \textbf{React} $\cdot$ \textbf{Redux} $\cdot$ Redis $\cdot$ SBT $\cdot$
+    Scala $\cdot$ \textbf{Spark} $\cdot$ SQL $\cdot$ Subversion $\cdot$ \textbf{TypeScript} $\cdot$ Visual Studio Code $\cdot$
+    Vue.js $\cdot$ \textbf{Web Application} $\cdot$ Webpack $\cdot$ WebSocket
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectiontitle[suitcase]{Work Experience}
+\sectiontitle{suitcase}{Work Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsectiontitle{Machine Learning Engineer at Ele.me \textnormal{\faicon{map-marker}} Shanghai}[Mar 2017 --- Nov 2017]
-\griditem{Built a CTR (click-through rate) prediction system with Spark, Hive, Kafka and Redis}
-\griditem{Developed a feature engineering and model training library which can process billions of samples in a few hours}
-\griditem{Experience of supervised/unsupervised learning model training, collaborative filtering and frequent pattern mining}
-\griditem{Designed internal and external table schemas in Hive with appropriate static and dynamic partitions for efficiency}
-\griditem{Expert in using Spark transformations and actions to build both batch processing and realtime streaming applications}
-\griditem{Involved in performance optimization of Spark jobs by memory tuning, data persisting and variable broadcasting}
-\subsectiontitle{Web Developer at Fortinet Technologies \textnormal{\faicon{map-marker}} Vancouver}[May 2013 --- Jun 2015]
-\griditem{Implementation and maintenance of web-based user interfaces for Fortinet products}
-\griditem{Collaborated with product, design and development teams to create user friendly and powerful web applications}
-\griditem{Extensive experience in developing rich applications with AngularJS, jQuery, Bootstrap and Django}
-\griditem{Developed flexible and reusable modules/components/directives/providers to reduce the degree of coupling in code base}
-\griditem{Created dynamic and reactive forms to describe backend business object model and validate user input}
-\griditem{Designed data visualization widgets such as charts, graphs and maps to present the significance of data using D3.js}
+\subsectiontitle{Software Engineer at Tableau \faicon{map-marker} Vancouver}[May 2018 --- Present]
+\gridpar{38}{
+    ...
+}
+\subsectiontitle{Machine Learning Engineer at Ele.me \faicon{map-marker} Shanghai}[Mar 2017 --- Nov 2017]
+\gridpar{18}{
+    Built a CTR (click-through rate) prediction system with Spark, Hive, Kafka and Redis \\
+    Developed a feature engineering and model training library which can process billions of samples in a few hours \\
+    Experience of supervised/unsupervised learning model training, collaborative filtering and frequent pattern mining \\
+    Designed internal and external table schemas in Hive with appropriate static and dynamic partitions for efficiency \\
+    Expert in using Spark transformations and actions to build both batch processing and realtime streaming applications \\
+    Involved in performance optimization of Spark jobs by memory tuning, data persisting and variable broadcasting
+}
+\subsectiontitle{Web Developer at Fortinet \faicon{map-marker} Vancouver}[May 2013 --- Jun 2015]
+\gridpar{18}{
+    Implementation and maintenance of web-based user interfaces for Fortinet products \\
+    Collaborated with product, design and development teams to create user friendly and powerful web applications \\
+    Extensive experience in developing rich applications with AngularJS, jQuery, Bootstrap and Django \\
+    Developed flexible and reusable modules/components/directives/providers to reduce the degree of coupling in code base \\
+    Created dynamic and reactive forms to describe backend business object model and validate user input \\
+    Designed data visualization widgets such as charts, graphs and maps to present the significance of data using D3.js
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectiontitle[graduation-cap]{Education}
+\sectiontitle{graduation-cap}{Education}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsectiontitle{Professional Master's Program in Big Data}
-\doublegriditem{Simon Fraser University}{M.Sc. in Computing Science; GPA:3.93/4.33}[Burnaby B.C., Canada][Sep 2015 --- Dec 2016]
+\degree{Simon Fraser University}{Burnaby B.C., Canada}{M.Sc. in Computing Science; GPA:3.93/4.33}{Sep 2015 --- Dec 2016}
 \subsectiontitle{Dual-Degree Program in Computing Science}
-\doublegriditem{Simon Fraser University}{B.Sc. in Computing Science; GPA:3.68/4.33}[Burnaby B.C., Canada][Sep 2010 --- Apr 2013]
-\doublegriditem{Zhejiang University}{B.Eng. in Computing Science; GPA:4.20/5.00}[Hangzhou Zhejiang, China][Sep 2008 --- Aug 2010]
+\degree{Simon Fraser University}{Burnaby B.C., Canada}{B.Sc. in Computing Science; GPA:3.68/4.33}{Sep 2010 --- Apr 2013}
+\degree{Zhejiang University}{Hangzhou Zhejiang, China}{B.Eng. in Computing Science; GPA:4.20/5.00}{Sep 2008 --- Aug 2010}
 \end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\sectiontitle{Honours and Certifications}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\doublegriditem{Dean's Honour Roll in Computing Science}{Simon Fraser University}
-%\doublegriditem{National Scholarship}{Zhejiang University}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\flushpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\headershort{\name}{\phone}{\email}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\sectiontitle{Internships}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsectiontitle{R\&D Coop at FuseForward Solutions Group Ltd.}[May 2016 --- Aug 2016]
-%\griditem{Designed and implemented a data ingestion and KPI calculation engine in Java}
-%\griditem{Stream in performance metrics data from Nagios server through JSON api}
-%\griditem{Built up the publish-subscribe messaging pattern using Apache Camel, Apache ActiveMQ and Spark Streaming}
-%\griditem{Calculate key performance indicators using Spark and save the KPIs in Cassandra}
-%\subsectiontitle{Software Developer Intern at DemonWare Inc.}[Sep 2012 --- Apr 2013]
-%\griditem{Improved OO-design skills in Python by participating the development of a Tornado web application project}
-%\griditem{Implemented services in distributed systems that involves rpc, RESTful api design and data caching}
-%\griditem{Practiced the ability to anticipate and design for problems in a highly concurrent system}
-%\subsectiontitle{Software Engineer Intern at Capcom Vancouver}[Jan 2012 --- Apr 2012]
-%\griditem{Acquried C\# WPF programming by improving and adding features for internal game developing tools}
-%\griditem{Interactive communications with both core developers and game designers to accomplish tasks}
-%\griditem{Experienced typical game development teamwork}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\sectiontitle{School Projects}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsectiontitle{Weather Tweets}[Spring 2016]
-%\griditem{Big Data lab project implemented in Scala with Kafka and Spark Streaming}
-%\griditem{Motivated by finding the correlation between weather condition and people's mood}
-%\griditem{Build up the real time data pipeline from Twitter Streaming API to Spark Streaming through Apache Kafka}
-%\griditem{Integrate weather information and sentiment scores from Yahoo Weather API and IBM Watson Tone Analyzer}
-%\subsectiontitle{IMDb OLAP}[Fall 2015]
-%\griditem{Big Data lab project implemented in Scala with Cassandra/CQL and Spark/RDD}
-%\griditem{Motivated by finding interesting facts hidden in huge IMDb dataset}
-%\griditem{Find actors/actresses who showed up in different movies together very often}
-%\griditem{Analyze the correlation between actors/actresses ratio or average age and the movie rating/votes}
-%\subsectiontitle{Distributed Transaction System}[Summer 2011]
-%\griditem{Distributed file system project designed and implemented in Java}
-%\griditem{A replicated distributed file system built on top of TCP socket with transactional semantics}
-%\griditem{Light-weighted service threads with fully support of handling simultaneous requests from multiple clients}
-%\griditem{Technique in handling partial failure with uninterrupted service and full support of data backup/restore}
-%\subsectiontitle{Diagon Alley}[Summer 2011]
-%\griditem{Multi-thread programming project implemented in C++}
-%\griditem{Two camps of wizards, which are simulated by threads, do shopping at Diagon Alley with their own shopping lists}
-%\griditem{Wizards belong to different camps must not meet each other at the same shop during the shopping}
-%\griditem{Implemented a thread scheduler with high efficiency and lock free guarantee}
-%\subsectiontitle{Wumpus World}[Spring 2011]
-%\griditem{Artificial intelligence project designed and implemented in Java}
-%\griditem{A programed agent aiming to fetch gold and return safely in an dangerous unknown world taking least steps}
-%\griditem{The agent could sense a limited part of the world and take a given set of actions to accomplish its task}
-%\griditem{Designed the inferencing algorithm and logic based on the agent\rq{}s limited but growing knowledge base}

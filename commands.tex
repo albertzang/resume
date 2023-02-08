@@ -1,0 +1,102 @@
+\pagestyle{empty}
+\setstretch{0}
+\setlength{\parindent}{0pt}
+\setlength{\fboxrule}{0pt}
+\setlength{\fboxsep}{0pt}
+\FPeval{\vcursor}{0}
+% letterpaper is of 8.5 inch width * 11 inch height
+% 0.5 inch horizontal margins and 0.5 inch vertical margins
+% 2 * 160 grids, each grid is 3.75 inch in width and 1/16 inch in height
+\geometry{letterpaper, total={7.5in, 10in}, hcentering, noheadfoot}
+\TPGrid[0.5in, 0.5in]{2}{160}
+
+\def\fontsm{\fontsize{2\TPVertModule}{3\TPVertModule}\selectfont}
+\def\fontmd{\fontsize{2.5\TPVertModule}{4\TPVertModule}\selectfont}
+\def\fontlg{\fontsize{6\TPVertModule}{8\TPVertModule}\selectfont}
+\def\indentsize{0.02\TPHorizModule}
+\definecolor{light-gray}{gray}{0.9}
+
+% flushpage %
+\NewDocumentCommand{\flushpage}{}{\newpage\FPeval{\vcursor}{0}}
+
+% gridspace %
+% #1 = vertical space in unit of grid
+\NewDocumentCommand{\gridspace}{m}{\FPeval{\vcursor}{\vcursor+#1}}
+
+% grid %
+% #1 = keep vcursor
+% #2 = width
+% #3 = height
+% #4 = hpos
+% #5 = content
+% #6 = color (optional)
+\NewDocumentCommand{\grid}{smmmmo}{
+  \def\gridbox{\parbox[c][#3\TPVertModule]{#2\TPHorizModule}{#5}}
+  \begin{textblock}{#2} (#4,\vcursor)
+    \IfValueTF{#6}{\colorbox{#6}{\gridbox}}{\gridbox}
+  \end{textblock}
+  \IfBooleanF{#1}{\gridspace{#3}}
+}
+
+% headerfull %
+% #1 = name
+% #2 = city
+% #3 = country
+% #4 = phone
+% #5 = email
+\NewDocumentCommand{\headerfull}{mmmmm}{
+  \grid*{1}{8}{0}{\fontlg\textbf{\textsc{#1}}}
+  \grid{1}{8}{1}{\fontsm\hspace{\fill}\LaTeX}
+  \grid{2}{4}{0}{\fontmd\texttt{#2}\hspace{\fill}\texttt{#4}}
+  \grid{2}{4}{0}{\fontmd\texttt{#3}\hspace{\fill}\texttt{#5}}
+  \grid{2}{2}{0}{\rule{2\TPHorizModule}{0.5pt}}
+}
+
+% headershort %
+% #1 = name
+% #2 = phone
+% #3 = email
+\NewDocumentCommand{\headershort}{mmm}{
+  \grid*{1}{8}{0}{\fontlg\textbf{\textsc{#1}}}
+  \grid{1}{4}{1}{\fontmd\hspace{\fill}\texttt{#2}}
+  \grid{1}{4}{1}{\fontmd\hspace{\fill}\texttt{#3}}
+  \grid{2}{2}{0}{\rule{2\TPHorizModule}{0.5pt}}
+}
+
+% sectiontitle %
+% #1 = fontawesome icon
+% #2 = title
+\NewDocumentCommand{\sectiontitle}{mm}{
+  \gridspace{1}
+  \grid{2}{4}{0}{\fontmd\hspace{\indentsize}\faicon{#1}\hspace{\indentsize}\textsc{#2}}[light-gray]
+  \gridspace{1}
+}
+
+% subsectiontitle %
+% #1 = subtitle
+% #2 = sidenote (optional, default empty)
+\NewDocumentCommand{\subsectiontitle}{mO{}}{
+  \grid{2}{4}{0}{\fontmd\hspace{\indentsize}#1\fontmd\hspace{\fill}\textit{#2}\hspace*{\indentsize}}
+}
+
+% degree %
+% #1 = bold top-left
+% #2 = normal top-right
+% #3 = italic bottom-left
+% #4 = italic bottom-right
+\NewDocumentCommand{\degree}{mmmm}{
+  \grid{2}{3}{0}{\fontsm\hspace{\indentsize}\textbf{#1}\hspace{\fill}#2\hspace*{\indentsize}}
+  \grid{2}{3}{0}{\fontsm\hspace{\indentsize}\textit{#3}\hspace{\fill}\textit{#4}\hspace*{\indentsize}}
+}
+
+% gridpar %
+% #1 = height
+% #2 = paragraph
+\NewDocumentCommand{\gridpar}{mm}{
+  \begin{textblock}{2} (0,\vcursor)
+    \setstretch{1}
+    \centering
+    \parbox[c][#1\TPVertModule]{2\TPHorizModule-10pt}{\fontsm#2}
+  \end{textblock}
+  \gridspace{#1}
+}
