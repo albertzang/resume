@@ -14,7 +14,7 @@
 \def\fontmd{\fontsize{2.5\TPVertModule}{4\TPVertModule}\selectfont}
 \def\fontlg{\fontsize{6\TPVertModule}{8\TPVertModule}\selectfont}
 \def\indentsize{0.02\TPHorizModule}
-\definecolor{light-gray}{gray}{0.9}
+\definecolor{light-gray}{gray}{0.85}
 
 % flushpage %
 \NewDocumentCommand{\flushpage}{}{\newpage\FPeval{\vcursor}{0}}
@@ -49,7 +49,7 @@
   \grid{1}{8}{1}{\fontsm\hspace{\fill}\LaTeX}
   \grid{2}{4}{0}{\fontmd\texttt{#2}\hspace{\fill}\texttt{#4}}
   \grid{2}{4}{0}{\fontmd\texttt{#3}\hspace{\fill}\texttt{#5}}
-  \grid{2}{2}{0}{\rule{2\TPHorizModule}{0.5pt}}
+  \grid{2}{1}{0}{\rule{2\TPHorizModule}{0.5pt}}
 }
 
 % headershort %
@@ -60,7 +60,7 @@
   \grid*{1}{8}{0}{\fontlg\textbf{\textsc{#1}}}
   \grid{1}{4}{1}{\fontmd\hspace{\fill}\texttt{#2}}
   \grid{1}{4}{1}{\fontmd\hspace{\fill}\texttt{#3}}
-  \grid{2}{2}{0}{\rule{2\TPHorizModule}{0.5pt}}
+  \grid{2}{1}{0}{\rule{2\TPHorizModule}{0.5pt}}
 }
 
 % sectiontitle %
