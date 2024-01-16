@@ -40,15 +40,18 @@
 
 % headerfull %
 % #1 = name
-% #2 = city
-% #3 = country
-% #4 = phone
-% #5 = email
-\NewDocumentCommand{\headerfull}{mmmmm}{
-  \grid*{1}{8}{0}{\fontlg\textbf{\textsc{#1}}}
-  \grid{1}{8}{1}{\fontsm\hspace{\fill}\LaTeX}
-  \grid{2}{4}{0}{\fontmd\texttt{#2}\hspace{\fill}\texttt{#4}}
-  \grid{2}{4}{0}{\fontmd\texttt{#3}\hspace{\fill}\texttt{#5}}
+% #2 = motto
+% #3 = phone
+% #4 = email
+% #5 = linkedin
+% #6 = home
+\NewDocumentCommand{\headerfull}{mmmmmm}{
+  \grid*{1}{8}{1}{\hspace{\fill}\fontlg\textbf{\textsc{#1}}}
+  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{phone}\hspace{\indentsize}\fontmd\texttt{#3}}
+  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{envelope}\hspace{\indentsize}\fontmd\texttt{#4}}
+  \grid*{1}{8}{1}{\hspace{\fill}\fontsm\textit{#2}}
+  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{linkedin-in}\hspace{\indentsize}\fontmd\texttt{#5}}
+  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{home}\hspace{\indentsize}\fontmd\texttt{#6}}
   \grid{2}{1}{0}{\rule{2\TPHorizModule}{0.5pt}}
 }
 
@@ -68,7 +71,7 @@
 % #2 = title
 \NewDocumentCommand{\sectiontitle}{mm}{
   \gridspace{1}
-  \grid{2}{4}{0}{\fontmd\hspace{\indentsize}\faicon{#1}\hspace{\indentsize}\textsc{#2}}[light-gray]
+  \grid{2}{4}{0}{\fontmd\hspace{\indentsize}\faIcon{#1}\hspace{\indentsize}\textsc{#2}}[light-gray]
   \gridspace{1}
 }
 
