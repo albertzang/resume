@@ -2,25 +2,27 @@
 \usepackage{calc}
 \usepackage{xcolor}
 \usepackage{xparse}
-\usepackage[showboxes]{textpos}
+\usepackage{textpos}
 \usepackage{setspace}
 \usepackage{geometry}
-\usepackage{fontawesome}
+\usepackage[fixed]{fontawesome5}
 \usepackage[T1]{fontenc}
 \usepackage[nomessages]{fp}
 \usepackage[utopia]{mathdesign}
+\usepackage[pdfborder={0 0 0}]{hyperref}
 \input{commands.tex}
 \def\name{Albert Zang}
-\def\phone{(+1)778.237.8615}
-\def\email{albertzang.ys@gmail.com}
-\def\city{Vancouver BC}
-\def\country{Canada}
+\def\motto{Keep it simple, code it right!}
+\def\phone{\href{tel:+17782378615}{(+1)778.237.8615}}
+\def\email{\href{mailto:albertzang.ys@gmail.com}{albertzang.ys@gmail.com}}
+\def\linkedin{\href{https://www.linkedin.com/in/albertzang/}{linkedin.com/in/albertzang}}
+\def\home{\href{https://maps.app.goo.gl/5JedGP1KRUeaAWsi9}{Vancouver BC, Canada}}
 
 \begin{document}
 %\TPShowGrid{2}{160}
-\headerfull{\name}{\city}{\country}{\phone}{\email}
+\headerfull{\name}{\motto}{\phone}{\email}{\linkedin}{\home}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectiontitle{gears}{Technical Vocabulary}
+\sectiontitle{cogs}{Technical Vocabulary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \gridpar{12}{
             Agile Methodology
@@ -77,7 +79,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectiontitle{suitcase}{Work Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsectiontitle{Software Engineer at Tableau \faicon{map-marker} Vancouver}[May 2018 --- Present]
+\subsectiontitle{Software Engineer at Tableau (acquired by Salesforce)}[\faIcon{map-marker-alt}Vancouver \faIcon[regular]{calendar-alt}May 2018 --- Dec 2023]
 \gridpar{42}{
             Played a major role in the UI development of the Explain Data feature and became the team's primary contact for UI-related issues.
     $\cdot$ Led the design, implementation, and testing of telemetry systems for Explain Data through collaboration with user research and
@@ -97,7 +99,7 @@
     $\cdot$ Sought after by peers for input on challenging topics, consistently contributing to expanding team capabilities and growing the
             careers of team members.
 }
-\subsectiontitle{Machine Learning Engineer at Ele.me \faicon{map-marker} Shanghai}[Mar 2017 --- Nov 2017]
+\subsectiontitle{Machine Learning Engineer at Ele.me}[\faIcon{map-marker-alt}Shanghai \faIcon[regular]{calendar-alt}Mar 2017 --- Nov 2017]
 \gridpar{15}{
             Built a high-performance CTR prediction system using Spark, Hive, Kafka, and Redis.
     $\cdot$ Created a feature engineering library to process billions of data samples efficiently. 
@@ -106,7 +108,7 @@
     $\cdot$ Led performance optimization efforts to enhance efficiency and scalability through memory tuning, data persistence, and variable broadcasting.
     $\cdot$ Collaborated with cross-functional teams, including data engineers and data scientists, to integrate the prediction system into the overall data infrastructure.
 }
-\subsectiontitle{Web Developer at Fortinet \faicon{map-marker} Vancouver}[May 2013 --- Jun 2015]
+\subsectiontitle{Web Developer at Fortinet}[\faIcon{map-marker-alt}Burnaby \faIcon[regular]{calendar-alt}May 2013 --- Jun 2015]
 \gridpar{18}{
             Skilled in developing rich web applications using AngularJS, jQuery, Bootstrap, and Django, demonstrating expertise in front-end and back-end web development.
     $\cdot$ Designed and implemented modular components to enhance application scalability and minimize code dependencies, resulting in a more maintainable codebase.
