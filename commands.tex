@@ -46,13 +46,13 @@
 % #5 = linkedin
 % #6 = home
 \NewDocumentCommand{\headerfull}{mmmmmm}{
-  \grid*{1}{8}{1}{\hspace{\fill}\fontlg\textbf{\textsc{#1}}}
-  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{phone}\hspace{\indentsize}\fontmd\texttt{#3}}
-  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{envelope}\hspace{\indentsize}\fontmd\texttt{#4}}
-  \grid*{1}{8}{1}{\hspace{\fill}\fontsm\textit{#2}}
-  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{linkedin-in}\hspace{\indentsize}\fontmd\texttt{#5}}
-  \grid{1}{4}{0}{\hspace{\indentsize}\faIcon{home}\hspace{\indentsize}\fontmd\texttt{#6}}
-  \grid{2}{1}{0}{\rule{2\TPHorizModule}{0.5pt}}
+  \grid*{1}{8}{1}{\fontlg\hspace{\fill}\textbf{\textsc{#1}}\hspace*{\indentsize}}
+  \grid{1}{4}{0}{\fontmd\hspace{\indentsize}\faIcon{phone}\hspace{\indentsize}#3}
+  \grid{1}{4}{0}{\fontmd\hspace{\indentsize}\faIcon{envelope}\hspace{\indentsize}#4}
+  \grid*{1}{8}{1}{\fontsm\hspace{\fill}\textsl{#2}\hspace*{\indentsize}}
+  \grid{1}{4}{0}{\fontmd\hspace{\indentsize}\faIcon{linkedin-in}\hspace{\indentsize}#5}
+  \grid{1}{4}{0}{\fontmd\hspace{\indentsize}\faIcon{home}\hspace{\indentsize}#6}
+  \grid{2}{2}{0}{\rule{2\TPHorizModule}{1pt}}
 }
 
 % headershort %
@@ -79,17 +79,16 @@
 % #1 = subtitle
 % #2 = sidenote (optional, default empty)
 \NewDocumentCommand{\subsectiontitle}{mO{}}{
-  \grid{2}{4}{0}{\fontmd\hspace{\indentsize}#1\fontmd\hspace{\fill}\textit{#2}\hspace*{\indentsize}}
+  \grid{2}{4}{0}{\fontmd\hspace{\indentsize}#1\fontsm\hspace{\fill}\textsl{#2}\hspace*{\indentsize}}
 }
 
 % degree %
-% #1 = bold top-left
-% #2 = normal top-right
-% #3 = italic bottom-left
-% #4 = italic bottom-right
+% #1 = university
+% #2 = degree
+% #3 = city
+% #4 = date
 \NewDocumentCommand{\degree}{mmmm}{
-  \grid{2}{3}{0}{\fontsm\hspace{\indentsize}\textbf{#1}\hspace{\fill}#2\hspace*{\indentsize}}
-  \grid{2}{3}{0}{\fontsm\hspace{\indentsize}\textit{#3}\hspace{\fill}\textit{#4}\hspace*{\indentsize}}
+  \grid{2}{3}{0}{\fontsm\hspace{\indentsize}\textbf{#1} $\cdot$ \textsl{#2}\hspace{\fill}\textsl{#3 $\cdot$ #4}\hspace*{\indentsize}}
 }
 
 % gridpar %
