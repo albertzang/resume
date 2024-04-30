@@ -60,10 +60,11 @@
 % #2 = phone
 % #3 = email
 \NewDocumentCommand{\headershort}{mmm}{
+  \grid{2}{1}{0}{\rule{2\TPHorizModule}{0.618pt}}
   \grid*{1}{8}{0}{\fontlg\hspace{\indentsize}\textbf{\textsc{#1}}}
   \grid{1}{4}{1}{\fontmd\hspace{\fill}#2\hspace*{\indentsize}}
   \grid{1}{4}{1}{\fontmd\hspace{\fill}#3\hspace*{\indentsize}}
-  \grid{2}{1}{0}{\rule{2\TPHorizModule}{0.5pt}}
+  \grid{2}{1}{0}{\rule{2\TPHorizModule}{1pt}}
 }
 
 % sectiontitle %
