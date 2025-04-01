@@ -1,0 +1,58 @@
+% !TEX program = xelatex
+\documentclass[letterpaper]{article}
+\usepackage{calc}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{textpos}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage[nomessages]{fp}
+\usepackage[utopia]{mathdesign}
+\input{commands.tex}
+\setCJKmainfont[Path=./fonts/, Extension=.ttf, BoldFont=MicrosoftYaHei-Bold, AutoFakeSlant=true]{MicrosoftYaHei}
+\setCJKsansfont[Path=./fonts/, Extension=.ttf, BoldFont=MicrosoftYaHei-Bold, AutoFakeSlant=true]{MicrosoftYaHei}
+\setCJKmonofont[Path=./fonts/, Extension=.ttf, BoldFont=MicrosoftYaHei-Bold, AutoFakeSlant=true]{MicrosoftYaHei}
+\def\name{臧岩松}
+\def\phone{+86 (187) 2104-5485}
+\def\email{albertzang.ys@foxmail.com}
+
+\begin{document}
+\grid*{60}{8}{60}{\hfill\fontxl\textbf{\name}}
+\grid{60}{4}{0}{\fontsm\faIcon{phone} \phone}
+\grid{60}{4}{0}{\fontsm\faIcon{at} \email}
+\grid{120}{2}{0}{\rule{120\TPHorizModule}{0.5pt}}[][0pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{cogs} 专业技能}[lightgray]
+\spacer{1}
+\grid{120}{12}{0}{\fontsm}
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{suitcase} 工作经历}[lightgray]
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\underline{Microsoft $\cdot$ Senior Software Engineer}
+\hfill\fontxs{加拿大，温哥华 $\cdot$ 2024年6月 - 至今}}
+\grid{120}{4}{0}{\fontmd\underline{Salesforce $\cdot$ Lead Member of Technical Staff}
+\hfill\fontxs{加拿大，温哥华 $\cdot$ 2022年2月 - 2023年12月}}
+\grid{120}{4}{0}{\fontmd\underline{Salesforce $\cdot$ Senior Member of Technical Staff}
+\hfill\fontxs{加拿大，温哥华 $\cdot$ 2020年4月 - 2022年1月}}
+\grid{120}{4}{0}{\fontmd\underline{Tableau $\cdot$ Software Engineer}
+\hfill\fontxs{加拿大，温哥华 $\cdot$ 2018年5月 - 2020年3月}}
+\grid{120}{4}{0}{\fontmd\underline{Alibaba $\cdot$ 资深算法工程师}
+\hfill\fontxs{中国，上海 $\cdot$ 2017年3月 - 2017年11月}}
+\grid{120}{4}{0}{\fontmd\underline{Fortinet $\cdot$ Web Developer}
+\hfill\fontxs{加拿大，温哥华 $\cdot$ 2013年5月 - 2015年6月}}
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{graduation-cap} 教育背景}[lightgray]
+\spacer{1}
+\grid{120}{3}{0}{\fontsm\underline{Professional Master's Program in Big Data}}
+\grid{120}{3}{0}{\fontsm\textbf{Simon Fraser University}\hfill\fontxs{加拿大，温哥华}}
+\grid{120}{3}{0}{\fontxs\textsl{M.Sc. in Computing Science; GPA:3.93/4.33}\hfill{2015年9月 - 2016年12月}}
+\grid{120}{3}{0}{\fontsm\underline{Dual-Degree Program in Computing Science}}
+\grid{120}{3}{0}{\fontsm\textbf{Simon Fraser University}\hfill\fontxs{加拿大，温哥华}}
+\grid{120}{3}{0}{\fontxs\textsl{B.Sc. in Computing Science; GPA:3.68/4.33}\hfill{2010年9月 - 2013年4月}}
+\grid{120}{3}{0}{\fontsm\textbf{浙江大学}\hfill\fontxs{中国，杭州}}
+\grid{120}{3}{0}{\fontxs\textsl{B.Eng. in Computer Science and Technology; GPA:4.20/5.00}\hfill{2008年9月 - 2010年8月}}
+\end{document}

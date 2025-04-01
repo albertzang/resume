@@ -1,0 +1,203 @@
+\documentclass[letterpaper]{article}
+\usepackage{calc}
+\usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{textpos}
+%\usepackage[showboxes]{textpos} % DEBUG
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage[fixed]{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage[nomessages]{fp}
+\usepackage[utopia]{mathdesign}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\input{commands.tex}
+\def\name{Albert Zang}
+\def\motto{Keep it simple, code it right!}
+\def\phone{\href{tel:+17782378615}{+1 (778) 237-8615}}
+\def\email{\href{mailto:albertzang.ys@gmail.com}{albertzang.ys@gmail.com}}
+\def\linkedin{\href{https://www.linkedin.com/in/albertzang/}{linkedin.com/in/albertzang}}
+\def\home{\href{https://maps.app.goo.gl/5JedGP1KRUeaAWsi9}{Vancouver BC, Canada}}
+
+\begin{document}
+%\showgrid   % DEBUG
+\grid{\side}{8}{0}{\hfill\fontxl\textbf{\textsc{\name}}}
+\grid{\side}{8}{0}{\hfill\fontsm\textsl{\motto}}
+\grid{\side}{1}{0}{\rule{\side\TPHorizModule}{0.5pt}}[][0pt]
+\grid{\side}{4}{0}{\fontmd\faIcon{phone} \phone}
+\grid{\side}{4}{0}{\fontmd\faIcon{at} \email}
+\grid{\side}{4}{0}{\fontmd\faIcon{linkedin-in} \linkedin}
+\grid{\side}{4}{0}{\fontmd\faIcon{home} \home}
+\grid{\side}{1}{0}{\rule{\side\TPHorizModule}{0.5pt}}[][0pt]
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{\side}{4}{0}{\fontmd\faIcon{users} \textsc{About Me}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{\side}{54}{0}{\fontsm
+As a senior software engineer with 10 years of industry experience, I have
+cultivated extensive expertise across the full software engineering stack.
+In recent years, I've transitioned into a technical leadership role, consistently
+demonstrating strengths in software design, problem-solving, cross-functional
+collaboration, and team mentorship. My approach is grounded in a focus on detail,
+maintaining high code quality, and adhering to the principle of keeping solutions
+simple and efficient, ensuring they are scalable and maintainable in the long term.
+I pride myself on being a team player with a strong sense of ownership, always
+fostering a positive and productive environment. I remain humble and curious,
+and I value respect and collaboration in every aspect of my work. My ability to
+navigate ambiguity and lead with these values makes me a valuable asset to any team.
+}
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{\side}{4}{0}{\fontmd\faIcon{cogs} \textsc{Technical Vocabulary}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{\side}{30}{0}{\fontsm
+    \textbf{[ Languages ]} $\cdot$
+    C/C++ $\cdot$
+    C\# $\cdot$
+    CSS $\cdot$
+    Go $\cdot$
+    Java $\cdot$
+    JavaScript $\cdot$
+    Python $\cdot$
+    Scala $\cdot$
+    TypeScript $\cdot$
+    \textbf{[ Frameworks ]} $\cdot$
+    D3.js $\cdot$
+    GraphQL $\cdot$
+    gRPC $\cdot$
+    Next.js $\cdot$
+    Node.js $\cdot$
+    Qt $\cdot$
+    React $\cdot$
+    REST $\cdot$
+    Spark $\cdot$
+    \textbf{[ Toolkits ]} $\cdot$
+    Docker $\cdot$
+    Git $\cdot$
+    Kafka $\cdot$
+    Kubernetes $\cdot$
+    Linux $\cdot$
+    Webpack $\cdot$
+    \textbf{[ Databases ]} $\cdot$
+    Cassandra $\cdot$
+    MySQL $\cdot$
+    PostgresSQL $\cdot$
+    Redis $\cdot$
+    \textbf{[ AI ]} $\cdot$
+    LLM Agents $\cdot$
+    OpenAI API $\cdot$
+    Prompt Engineering $\cdot$
+    RAG $\cdot$
+    \textbf{[ Methodologies ]} $\cdot$
+    Agile $\cdot$
+    Big Data $\cdot$
+    CI/CD $\cdot$
+    Data Pipeline $\cdot$
+    Data Visualization $\cdot$
+    ETL $\cdot$
+    Machine Learning $\cdot$
+    Microservice $\cdot$
+    Web Application
+}
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{\side}{4}{0}{\fontmd\faIcon{graduation-cap} \textsc{Education}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{\side}{3}{0}{\fontsm\underline{Professional Master's Program in Big Data}}
+\grid{\side}{3}{0}{\fontsm\textbf{Simon Fraser University}\hfill\fontxs{Burnaby, Canada}}
+\grid{\side}{3}{0}{\fontxs\textsl{M.Sc. in Computing Science}\hfill{Sep 2015 - Dec 2016}}
+\grid{\side}{3}{0}{\fontsm\underline{Dual-Degree Program in Computing Science}}
+\grid{\side}{3}{0}{\fontsm\textbf{Simon Fraser University}\hfill\fontxs{Burnaby, Canada}}
+\grid{\side}{3}{0}{\fontxs\textsl{B.Sc. in Computing Science}\hfill{Sep 2010 - Apr 2013}}
+\grid{\side}{3}{0}{\fontsm\textbf{Zhejiang University}\hfill\fontxs{Hangzhou, China}}
+\grid{\side}{3}{0}{\fontxs\textsl{B.Eng. in Computer Science and Technology}\hfill{Sep 2008 - Aug 2010}}
+
+\FPeval{\vcursor}{0}
+
+\grid*{\main}{160}{\side}{\rule{0.5pt}{160\TPVertModule}}[][0pt]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{\main}{4}{\side}{\fontmd\underline{Microsoft $\cdot$ Senior Software Engineer}
+\hfill\fontxs{Vancouver, Canada $\cdot$ Jun 2024 - Present}}
+%--------------------------------------------------------------------------------%
+\grid{\main}{12}{\side}{\fontsm
+Actively engaged in productizing the Copilot prototype for AI infrastructure, working
+closely with the Microsoft Research team. Acquiring extensive hands-on experience with
+Azure OpenAI APIs, prompt engineering, Retrieval-Augmented Generation (RAG), and Large
+Language Model (LLM)-based agents development.
+}
+%--------------------------------------------------------------------------------%
+\grid{\main}{4}{\side}{\fontmd\underline{Salesforce $\cdot$ Lead MTS} \fontxs\textsl{Promotion}
+\hfill\fontxs{Vancouver, Canada $\cdot$ Feb 2022 - Dec 2023}}
+%--------------------------------------------------------------------------------%
+\grid{\main}{24}{\side}{\fontsm
+As a Technical Lead, contributed to collaborative decision-making and problem-solving
+through participation in cross-team architectural design discussions. Spearheaded the
+technical design and implementation of the Explain Data service's gRPC API. Addressed
+escalating on-call backlog by implementing a scheduled incident monitoring dashboard
+using Splunk, significantly decreased our incident response time. Effectively managed
+technical challenges by evaluating trade-offs, prioritizing development, making decisions,
+and resolving problems. Highly valued by peers for mentorship on challenging topics,
+actively enhancing team capabilities and advancing team members' careers.
+}
+%--------------------------------------------------------------------------------%
+\grid{\main}{4}{\side}{\fontmd\underline{Salesforce $\cdot$ Senior MTS} \fontxs\textsl{Acquisition $\cdot$ Promotion}
+\hfill\fontxs{Vancouver, Canada $\cdot$ Apr 2020 - Jan 2022}}
+%--------------------------------------------------------------------------------%
+\grid{\main}{30}{\side}{\fontsm
+As a Scrum Master, I effectively organized team priorities and facilitated meetings,
+steering the team through major transitions including a management change and the
+shift to remote work, ensuring seamless operations. Led the design, implementation,
+and testing of the telemetry project for Explain Data in collaboration with user
+research and telemetry infrastructure team. This effort resulted in a comprehensive
+dashboard that tracks feature usage and adoption, providing essential insights for
+strategic decisions and data-driven improvements. Earned a prestigious role in
+Tableau's Browser Community of Practice (BCoP) through recognized contributions in
+the company-wide web development spacer, serving as Community Organizer and hosting
+monthly Tableau web development community meetings.
+}
+%--------------------------------------------------------------------------------%
+\grid{\main}{4}{\side}{\fontmd\underline{Tableau $\cdot$ Software Engineer}
+\hfill\fontxs{Vancouver, Canada $\cdot$ May 2018 - Mar 2020}}
+%--------------------------------------------------------------------------------%
+\grid{\main}{24}{\side}{\fontsm
+Played a major role in the UI development of the Explain Data feature and became
+the team's primary contact for UI-related issues. Extended Tableau's module-dev-scripts
+to bundle UI modules into a static site on GitLab Pages, integrating with our CI/CD
+pipeline. This pivotal innovation expedited cross-functional feedback, significantly
+speeding up the development process and fostering seamless innovation across teams.
+Spearheaded key enhancements to Tableau's Hybrid UI framework, including making
+the Hybrid Dialog resizable and adding a Hybrid Side Panel, enhancing functionality
+across feature teams and supporting Tableau's product success.
+}
+%--------------------------------------------------------------------------------%
+\grid{\main}{4}{\side}{\fontmd\underline{Alibaba $\cdot$ Senior Machine Learning Engineer}
+\hfill\fontxs{Shanghai, China $\cdot$ Mar 2017 - Nov 2017}}
+%--------------------------------------------------------------------------------%
+\grid{\main}{21}{\side}{\fontsm
+Maintained a high-performance CTR prediction system using Spark, Hive, Kafka, and
+Redis. Built a feature engineering library to process billions of data records
+efficiently.  Trained prediction models using logistic regression, feature crossing,
+and factorization machines. Utilized Spark transformations and actions for batch and
+real-time processing. Led performance optimization efforts through memory tuning,
+data persistence, and variable broadcasting. Collaborated with data infrastructure
+teams to successfully integrate the prediction system into the overall data pipeline.
+}
+%--------------------------------------------------------------------------------%
+\grid{\main}{4}{\side}{\fontmd\underline{Fortinet $\cdot$ Web Developer}
+\hfill\fontxs{Burnaby, Canada $\cdot$ May 2013 - Jun 2015}}
+%--------------------------------------------------------------------------------%
+\grid{\main}{24}{\side}{\fontsm
+Skilled in developing rich web applications using AngularJS, jQuery, Bootstrap,
+and Django, demonstrating expertise in full stack web development. Designed and
+implemented modular components to improve scalability and maintainability of the
+codebase. Developed dynamic and responsive web forms that accurately mirrored the
+backend business object model and validated user inputs, enhancing user experience.
+Developed data visualization widgets using D3.js to effectively communicate complex
+data insights to end-users. Worked closely with product, design, and development
+teams to deliver intuitive and feature-rich web applications.
+}
+\end{document}

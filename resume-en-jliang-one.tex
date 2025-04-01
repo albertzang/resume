@@ -1,0 +1,138 @@
+\documentclass[letterpaper]{article}
+\usepackage{calc}
+\usepackage{xcolor}
+\usepackage{xparse}
+%\usepackage{textpos}
+\usepackage[showboxes]{textpos} % DEBUG
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage[fixed]{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage[nomessages]{fp}
+\usepackage[utopia]{mathdesign}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\input{commands.tex}
+\def\name{Jiaen Liang}
+\def\phone{\href{tel:+17789298864}{+1 (778) 929-8864}}
+\def\email{\href{mailto:liangjiaen2017@gmail.com}{liangjiaen2017@gmail.com}}
+\def\linkedin{\href{https://www.linkedin.com/in/jiaenliang/}{linkedin.com/in/jiaenliang}}
+\def\home{\href{https://maps.app.goo.gl/YPsMEB5iPnVwae6C9}{Vancouver BC, V6S 0J1, Canada}}
+
+\begin{document}
+%\showgrid   % DEBUG
+\grid*{60}{12}{60}{\hfill\fontxl\textbf{\textsc{\name}}}
+\grid{60}{3}{0}{\fontsm\faIcon{phone} \phone}
+\grid{60}{3}{0}{\fontsm\faIcon{at} \email}
+\grid{60}{3}{0}{\fontsm\faIcon{linkedin-in} \linkedin}
+\grid{60}{3}{0}{\fontsm\faIcon{home} \home}
+\grid{120}{2}{0}{\rule{120\TPHorizModule}{0.5pt}}[][0pt]
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{book} \textsc{Summary Of Qualifications}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{120}{12}{0}{\fontsm
+$\cdot$ Experienced and passionate about enhancing student learning and engagement.\\
+$\cdot$ Proficient in Microsoft Office Suite with strong adaptability and attention to detail.\\
+$\cdot$ Effective independently and as a team member.\\
+$\cdot$ Fluent in English, Mandarin and Cantonese.
+}
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{suitcase} \textsc{Work Experience}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Marketing Manager $\cdot$ Mighty Moose Learning Center}
+\hfill\fontxs{Vancouver, Canada $\cdot$ 2024 - Present}}
+%--------------------------------------------------------------------------------%
+\grid{120}{6}{0}{\fontsm
+Lead marketing and outreach for French and Mandarin after school programs, support classroom activities, and maintain strong communication with parents to enhance engagement and enrollment.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Mandarin Teacher $\cdot$ Taolee Chinese Learning Center}
+\hfill\fontxs{Vancouver, Canada $\cdot$ 2024 - Present}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+Deliver Mandarin lessons to students aged 4–8 in after-school programs, focusing on developing core language skills in speaking, listening, reading, and writing; also coordinate major events and competitions, and manage social media to enhance community engagement and program visibility.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Marketing Coordinator $\cdot$ ETIG Canada Education \& Immigration}
+\hfill\fontxs{Vancouver, Canada $\cdot$ 2020 - 2022}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+Expanded study abroad and immigration services targeting the Chinese market, focusing on K-12 school application and enrollment services and Canadian camp programs; led promotional campaigns, coordinated with educational partners, and supported clients through consultation and application processes.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Assistant Editor $\cdot$ Shanghai Jiaotong University}
+\hfill\fontxs{Shanghai, China $\cdot$ 2015 - 2017}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+Assisted the chief editor at the Institute for Philanthropy Development with editorial tasks, including managing academic permissions, organizing author affiliations, and maintaining author communication; also contributed to NGO-related projects and conferences promoting charity and volunteerism.
+}
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{hand-holding-heart} \textsc{Volunteer Experience}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Parent Support Services Society of BC}
+\hfill\fontxs{Vancouver, Canada $\cdot$ June 2024 - Present}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+After completing official training, facilitated a Mandarin parent support group (twice a month) for newcomer families, providing a safe and confidential space for open sharing. Promote peer connection, cultural understanding, and community engagement through non-judgmental group discussions held at University Neighbourhoods Association communities.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{The University of British Columbia, Department of Asian Studies}
+\hfill\fontxs{Vancouver, Canada $\cdot$ September 2024 - December 2024}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+Completed official training from the Chinese Language Program  and volunteered as an OP (Oral Practice partner) in the Mandarin program. Supported UBC students in improving their Chinese speaking skills through regular one-on-one conversation sessions focused on fluency, pronunciation, and cultural exchange.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Vancouver School Board, Settle Workers in Schools (SWIS) Program}
+\hfill\fontxs{Vancouver, Canada $\cdot$ May 2024 - June 2024}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+Completed the five-day Newcomer Parent Leadership Program (NPLP) training and volunteered at the Vancouver Newcomer Welcome Centre as an assistant, welcoming and settling newcomer families in the waiting area, and informing office staff to assist them with the school registration process.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{University Neighbourhoods Association (UNA)}
+\hfill\fontxs{Vancouver, Canada $\cdot$ May 2024 - June 2024}}
+%--------------------------------------------------------------------------------%
+\grid{120}{9}{0}{\fontsm
+Supporting young learners aged 4–6 in Craft Class with hands-on creative activities such as cutting, gluing, painting, and drawing. Assisted instructors in maintaining an inclusive and engaging environment while helping children follow instructions and express themselves through art.
+}
+%--------------------------------------------------------------------------------%
+\grid{120}{4}{0}{\fontmd\underline{Vancouver Public Library,Library Champion Project}
+\hfill\fontxs{Vancouver, Canada $\cdot$ January 2024 - April 2024}}
+%--------------------------------------------------------------------------------%
+\grid{120}{6}{0}{\fontsm
+Completed training on library services, community engagement, and communication strategies. Promoted library programs and multilingual resources to new immigrants through outreach activities, and supported newcomers by providing cultural and language assistance.
+}
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{certificate} \textsc{Training \& Certificates}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{120}{21}{0}{\fontsm
+$\cdot$ Nonviolent Crisis Intervention Certificate\\
+$\cdot$ Everyday Anxiety Strategies for Educators (K-7) (EASE) Certificate\\
+$\cdot$ Walking Alongside Youth with Depression Certificate\\
+$\cdot$ Early Childhood Education Assistant (ECEA) Certificate\\
+$\cdot$ AMI 0-3 Assistant Certificate (Montessori Assistant)\\
+$\cdot$ First Aid \& CPR\slash AED Level B (Emergency Child Care)\\
+$\cdot$ FoodSafe Level1 (Basic)
+}
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\faIcon{graduation-cap} \textsc{Education}}[lightgray]
+\spacer{1}
+%--------------------------------------------------------------------------------%
+\grid{120}{3}{0}{\fontsm{Langara Education Assistant Program}
+\hfill\fontsm{Vancouver, Canada $\cdot$ September 2024 - April 2025}}
+\grid{120}{3}{0}{\fontsm{Master’s Degree in Anthropology $\cdot$ Sun Yat-sen University}
+\hfill\fontsm{Guangzhou, China $\cdot$ September 2012 - June 2014}}
+\grid{120}{3}{0}{\fontsm{Bachelor’s Degree in Journalism $\cdot$ Guangdong University of Finance and Economics}
+\hfill\fontsm{Guangzhou, China $\cdot$ September 2008 - June 2012}}
+\end{document}
