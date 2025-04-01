@@ -1,0 +1,40 @@
+\documentclass[letterpaper]{article}
+\usepackage{calc}
+\usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{textpos}
+%\usepackage[showboxes]{textpos} % DEBUG
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage[fixed]{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage[nomessages]{fp}
+\usepackage[utopia]{mathdesign}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\input{commands.tex}
+\def\name{Jiaen Liang}
+\def\phone{\href{tel:+17789298864}{+1 (778) 929-8864}}
+\def\email{\href{mailto:liangjiaen2017@gmail.com}{liangjiaen2017@gmail.com}}
+\def\linkedin{\href{https://www.linkedin.com/in/jiaenliang/}{linkedin.com/in/jiaenliang}}
+\def\home{\href{https://maps.app.goo.gl/YPsMEB5iPnVwae6C9}{Vancouver BC, V6S 0J1, Canada}}
+\def\date{April 1st, 2025}
+\def\title{RE: Hiring Position...}
+
+
+\begin{document}
+%\showgrid   % DEBUG
+\grid*{60}{16}{60}{\hfill\fontxl\textbf{\textsc{\name}}}
+\grid{60}{4}{0}{\fontmd\faIcon{phone} \phone}
+\grid{60}{4}{0}{\fontmd\faIcon{at} \email}
+\grid{60}{4}{0}{\fontmd\faIcon{linkedin-in} \linkedin}
+\grid{60}{4}{0}{\fontmd\faIcon{home} \home}
+\grid{120}{2}{0}{\rule{120\TPHorizModule}{0.5pt}}[][0pt]
+%--------------------------------------------------------------------------------%
+\spacer{1}
+\grid{120}{4}{0}{\fontmd\underline{\textbf{\title}}\hfill{\date}}
+\spacer{1}
+\grid{120}{90}{0}{\fontsm
+Dear Hiring Manager,
+...
+}
+\end{document}
